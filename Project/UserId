@@ -1,0 +1,291 @@
+package calculator;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+public class userid implements ActionListener
+{
+JFrame f1,f2,f3,f4,f5,f6,f7,f8,f9;
+
+JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
+JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9;
+JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9;
+Container c1,c2,c3,c4,c5,c6,c7,c8,c9;
+ButtonGroup bg;
+JRadioButton r1,r2,r3,r4;;
+userid()
+{
+f1=new JFrame("1st frame");
+c1=f1.getContentPane();
+b1=new JButton("NEW USER");
+b1.addActionListener(this);
+b2=new JButton("EXISTING USER");
+b2.addActionListener(this);
+c1.add(b2);
+c1.add(b1);
+f1.setSize(350,350);
+f1.setVisible(true);
+f1.setLayout(null);
+f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+c1.setBackground(Color.RED);
+b1.setBounds(20,50,100,40);
+b2.setBounds(150,50,150,40);
+}
+public void make1frame()
+{
+f2=new JFrame("2nd frame");
+c2=f2.getContentPane();
+l1=new JLabel("Enter product key");
+t1=new JTextField();
+b3=new JButton("GO");
+b3.addActionListener(this);
+f2.setVisible(true);
+f2.setSize(500,500);
+f2.setLayout(null);
+f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+c2.add(l1);
+c2.add(t1);
+c2.add(b3);
+c2.setBackground(Color.GREEN);
+l1.setBounds(20,20,160,30);
+t1.setBounds(200,20,110,30);
+b3.setBounds(20,60,60,40);
+}
+public void make2frame()
+{
+f3=new JFrame("login");
+c3=f3.getContentPane();
+l2=new JLabel("ENTER USER ID");
+t2=new JTextField();
+l3=new JLabel("ENTER PASSWORD");
+t3=new JPasswordField();
+b4=new JButton("LOGIN");
+b4.addActionListener(this);
+f3.setSize(500,500);
+f3.setVisible(true);
+f3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+f3.setLayout(null);
+c3.add(l2);
+c3.add(t2);
+c3.add(l3);
+c3.add(t3);
+c3.add(b4);
+c3.setBackground(Color.PINK);
+l2.setBounds(20,20,140,30);
+t2.setBounds(190,20,100,30);
+l3.setBounds(20,50,140,30);
+t3.setBounds(190,50,100,30);
+b4.setBounds(100,100,100,50);
+}
+public void make3frame()
+{
+f4=new JFrame("4th frame");
+c4=f4.getContentPane();
+l4=new JLabel("INVALID");
+b5=new JButton("BACK");
+b5.addActionListener(this);
+c4.add(l4);
+c4.add(b5);
+f4.setSize(400,400);
+f4.setVisible(true);
+f4.setLayout(null);
+f4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+c4.setBackground(Color.GRAY);
+l4.setBounds(20,20,70,30);
+b5.setBounds(40,50,70,50);
+}
+public void make4frame()
+{
+f5=new JFrame("5th frame");
+c5=f5.getContentPane();
+b6=new JButton("CONTINUE");
+b6.addActionListener(this);
+l5=new JLabel("WELCOME");
+f5.setSize(400,400);
+f5.setVisible(true);
+f5.setLayout(null);
+c5.setBackground(Color.RED);
+c5.add(b6);
+c5.add(l5);
+l5.setBounds(20,20,80,40);
+b6.setBounds(50,70,100,40);
+}
+public void make5frame()
+{
+f6=new JFrame("6th frame");
+c6=f6.getContentPane();
+l6=new JLabel("Ques. Who is the P.M of India?");
+r1=new JRadioButton("Narender Modi");
+r2=new JRadioButton("Indira Gandhi");
+r3=new JRadioButton("Rahul Gandhi");
+r4=new JRadioButton("Lalu Yadav");
+t4=new JTextField();
+bg=new ButtonGroup();
+bg.add(r1);
+bg.add(r2);
+bg.add(r3);
+bg.add(r4);
+b7=new JButton("CHECK ANSWER");
+b7.addActionListener(this);
+l6.setBounds(20,20,200,30);
+r1.setBounds(20,50,130,30);
+r2.setBounds(20,80,130,30);
+r3.setBounds(20,110,130,30);
+r4.setBounds(20,140,130,30);
+b7.setBounds(40,200,160,40);
+t4.setBounds(20,260,130,30);
+f6.setVisible(true);
+f6.setSize(500,500);
+f6.setLayout(null);
+f6.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+c6.setBackground(Color.GREEN);
+c6.add(l6);
+c6.add(r1);
+c6.add(r3);
+c6.add(r2);
+c6.add(r4);
+c6.add(b7);
+c6.add(t4);
+}
+public void make6frame()
+{
+f7=new JFrame("7th frame");
+c7=f7.getContentPane();
+l7=new JLabel("WELCOME");
+b8=new JButton("CONTINUE");
+b8.addActionListener(this);
+c7.add(l7);
+c7.add(b8);
+c7.setBackground(Color.WHITE);
+f7.setVisible(true);
+f7.setLayout(null);
+f7.setSize(400,400);
+f7.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+l7.setBounds(20,20,100,40);
+b8.setBounds(50,60,100,40);
+}
+public void make7frame()
+{
+f8=new JFrame("8th frame");
+c8=f8.getContentPane();
+b9=new JButton("EXIT");
+b9.addActionListener(this);
+l8=new JLabel("you are not authorised");
+c8.add(b9);
+c8.add(l8);
+f8.setVisible(true);
+f8.setLayout(null);
+f8.setSize(400,400);
+f8.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+c8.setBackground(Color.BLUE);
+l8.setBounds(20,20,200,40);
+b9.setBounds(50,60,100,40);
+}
+public void make8frame()
+{
+f9=new JFrame("9th frame");
+c9=f9.getContentPane();
+l9=new JLabel("WORK UNDER PROCESS");
+c9.add(l9);
+c9.setBackground(Color.RED);
+f9.setVisible(true);
+f9.setSize(400,400);
+f9.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+f9.setLayout(null);
+l9.setBounds(50,40,300,60);
+}
+public void actionPerformed(ActionEvent e)
+{
+if(e.getSource()==b1)
+{
+make1frame();
+}
+else if(e.getSource()==b2)
+{
+make2frame();
+}
+else if(e.getSource()==b4)
+{
+String s1=new String("global");
+String s2=new String("1234");
+String s3=new String();
+String s4=new String();
+s3=t2.getText();
+s4=t3.getText();
+int t=1,f=1;
+if(s3.equals(s1))
+{
+	t=0;
+}
+if(s4.equals(s2))
+{
+	f=0;
+}
+if(t!=0||f!=0)
+{
+make3frame();
+}
+else if(t==0&&f!=0)
+{
+make3frame();
+}
+else if(t!=0&&f==0)
+{
+make3frame();
+}
+else if(t==0&&f==0)
+{
+make4frame();
+}
+}
+else if(e.getSource()==b5)
+{
+make2frame();
+}
+else if(e.getSource()==b6)
+{
+make5frame();
+}
+else if(e.getSource()==b7)
+{
+if(r1.isSelected())
+{
+t4.setText("RIGHT ANSWER");
+}
+else
+{
+t4.setText("WRONG ANSWER");
+}
+}
+else if(e.getSource()==b3)
+{
+String s1=new String("global technology");
+String s2=new String();
+s2=t1.getText();
+int t=1;
+if(s1.equals(s2))
+{
+	t=0;
+}
+if(t==0)
+{
+make6frame();
+}
+else
+{
+make7frame();
+}
+}
+else if(e.getSource()==b8)
+{
+make8frame();
+}
+else if(e.getSource()==b9)
+{
+System.exit(0);
+}
+}
+public static void main(String args[])
+{
+new userid();
+}
+}
